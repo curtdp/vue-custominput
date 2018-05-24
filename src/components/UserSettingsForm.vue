@@ -3,7 +3,7 @@
     <h1 class="text-2xl font-bold mb-6">Ваши настройки</h1>
     <label class="block mb-6">
       <span class="form-label mb-2">email адрес</span>
-      <input :value="email" class="form-input" placeholder="you@example.com">
+      <input :value="email" @input="email = $event.target.value" class="form-input" placeholder="you@example.com">
     </label>
     <div class="mb-8">
       <span class="form-label mb-2">Почтовая рассылка</span>
