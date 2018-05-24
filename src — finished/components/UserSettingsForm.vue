@@ -9,39 +9,34 @@
       <span class="form-label mb-2">Почтовая рассылка</span>
       <div class="flex justify-between items-center">
         <p class="mr-4">Подписаться на новости и обновления.</p>
-          <span class="toggle flex-no-shrink" role="checkbox" tabindex="0"
-            :aria-checked="receiveNewsletter.toString()"
-            @click="toggleNewsletter"
-            @keydown.space.prevent="toggleNewsletter"
-          ></span>
+        <toggle-input v-model="receiveNewsletter"></toggle-input>
       </div>
     </div>
     <div class="text-right">
-      <button type="submit" class="btn btn-blue">Сохранить настройки</button>
+      <button type="button" class="btn btn-blue">Сохранить настройки</button>
     </div>
   </form>
 </template>
 
 <script>
+import ToggleInput from "./ToggleInput.vue"
 
 export default {
   components: {
+    ToggleInput
   },
   data() {
     return {
-      email: "igor@example.com",
+      email: "jane@example.com",
       receiveNewsletter: false
     }
   },
   methods: {
     submit() {
-      console.log("Отправка настроек...", {
+      console.log("Submitting preferences...", {
         email: this.email,
         receiveNewsletter: this.receiveNewsletter
       })
-    },
-    toggleNewsletter() {
-      this.receiveNewsletter = !this.receiveNewsletter
     }
   }
 }
