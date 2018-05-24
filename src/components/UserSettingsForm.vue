@@ -9,11 +9,7 @@
       <span class="form-label mb-2">Почтовая рассылка</span>
       <div class="flex justify-between items-center">
         <p class="mr-4">Подписаться на новости и обновления.</p>
-          <span class="toggle flex-no-shrink" role="checkbox" tabindex="0"
-            :aria-checked="receiveNewsletter.toString()"
-            @click="toggleNewsletter"
-            @keydown.space.prevent="toggleNewsletter"
-          ></span>
+          <toggle-input></toggle-input>
       </div>
     </div>
     <div class="text-right">
@@ -23,9 +19,11 @@
 </template>
 
 <script>
+import ToggleInput from './ToggleInput.vue'
 
 export default {
   components: {
+    ToggleInput
   },
   data() {
     return {
