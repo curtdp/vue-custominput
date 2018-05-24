@@ -9,7 +9,8 @@
       <span class="form-label mb-2">Почтовая рассылка</span>
       <div class="flex justify-between items-center">
         <p class="mr-4">Подписаться на новости и обновления.</p>
-          <toggle-input :value="receiveNewsletter"></toggle-input>
+          <toggle-input :value="receiveNewsletter" @input="receiveNewsletter = $event"></toggle-input>
+          <!-- <toggle-input :value="receiveNewsletter" @input="(newValue) => { receiveNewsletter = newValue }"></toggle-input> -->
       </div>
     </div>
     <div class="text-right">
