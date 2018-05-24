@@ -1,8 +1,8 @@
 <template>
   <span class="toggle flex-no-shrink" role="checkbox" tabindex="0"
-    :aria-checked="receiveNewsletter.toString()"
-    @click="toggleNewsletter"
-    @keydown.space.prevent="toggleNewsletter"
+    :aria-checked="value.toString()"
+    @click="toggle"
+    @keydown.space.prevent="toggle"
   ></span>
 </template>
 
