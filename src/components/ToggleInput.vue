@@ -8,11 +8,7 @@
 
 <script>
   export default {
-    data() {
-      return {
-        value: false
-      }
-    },
+    props: ['value'],
     methods: {
       toggle() {
         this.value = !this.value

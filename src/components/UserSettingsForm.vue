@@ -9,7 +9,7 @@
       <span class="form-label mb-2">Почтовая рассылка</span>
       <div class="flex justify-between items-center">
         <p class="mr-4">Подписаться на новости и обновления.</p>
-          <toggle-input></toggle-input>
+          <toggle-input :value="receiveNewsletter"></toggle-input>
       </div>
     </div>
     <div class="text-right">
